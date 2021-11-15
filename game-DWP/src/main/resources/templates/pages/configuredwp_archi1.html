@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/styles_rooms_1.css}" rel="stylesheet" />
+	<script th:src="@{/js/configuredwp_archi1.js}"></script>
+    <title>Configuration du DWP</title>
+</head>
+<body>
+<div class="main">
+	<h1>Configuration du DigitalWorkSpace</h1>
+	<a th:href="@{/dwpmap}">Retour</a>	
+	<div><img th:src="@{/images/architectures/archi_1.png}"></div>
+	<p>Vous avez choisi l'architecture 1 pour ce DWP. Veuillez maintenant choisir le nombre de salles que vous voulez placer pour chaque sous-espace.</p>
+	<div class="areas">
+		<form method="post" th:action="@{/dwpmap1}" th:object="${dwparea}">
+		<div  class="office-area1">
+			<h2>Sous-espace bureau 1</h2>
+			
+			<div>
+				<span >Bureau individuel T1(5m2)</span>
+				<input type="number" name="bi_T1" min="0" max="30" placeholder="0-30" required th:field="*{biT1_1}">
+			<span class="validity"></span>
+			</div>
+			<div>
+				<span>Bureau individuel T2(10m2)</span>
+				<input type="number" name="bi_T2" min="0" max="15" placeholder="0-15" required th:field="*{biT2_1}">
+			<span class="validity"></span>
+			</div>
+			<div>
+				<span>OpenSpace(25m2)</span>
+				<input type="number" name="os" min="0" max="6" placeholder="0-6" required th:field="*{os_1}">
+			<span class="validity"></span>
+			</div>
+			<div>
+				<span>Salle de réunion(15m2)</span>
+				<input type="number" name="sr" min="0" max="10" placeholder="0-10" required th:field="*{sr_1}">
+			<span class="validity"></span>
+			</div>
+			<button type="button" onclick="verifySpace('office-area1')">Vérifier l'espace</button>
+			
+		</div>
+		<div class="office-area2">
+			<h2>Sous-espace bureau 2</h2>
+			
+			<div>
+				<span>Bureau individuel T1(5m2)</span>
+				<input type="number" name="bi_T1" min="0" max="30" placeholder="0-30" required th:field="*{biT1_2}">
+			<span class="validity"></span>
+			</div>
+			<div>
+				<span>Bureau individuel T2(10m2)</span>
+				<input type="number" name="bi_T2" min="0" max="15" placeholder="0-15" required th:field="*{biT2_2}">
+			<span class="validity"></span>
+			</div>
+			<div>
+				<span>OpenSpace(25m2)</span>
+				<input type="number" name="os" min="0" max="6" placeholder="0-6" required th:field="*{os_2}">
+			<span class="validity"></span>
+			</div>
+			<div> 
+				<span>Salle de réunion(15m2)</span>
+				<input type="number" name="sr" min="0" max="10" placeholder="0-10" required th:field="*{sr_2}">
+			<span class="validity"></span>
+			</div>					
+			<button type="button" onclick="verifySpace('office-area2')">Vérifier l'espace</button>
+			
+		</div>
+		<button type="submit">Valider</button>
+	  </form>
+	</div>
+</div>
+</body>
+</html>

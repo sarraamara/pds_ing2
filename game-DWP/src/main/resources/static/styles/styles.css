@@ -1,0 +1,108 @@
+/**archi1**/
+#outer-grid {
+  display: grid;
+  padding: 5px;
+  grid-gap: 8px;
+    grid-template-areas:
+    'ao1 ao1 ao1'
+    'ah1 ah1 ah1'
+    'ao2 ao2 ao2';
+   background-color: black;
+   width: 1840px;
+   height: 740px;
+   grid-template-rows: 300px 120px 300px;
+   margin: auto;
+}
+.area1 { grid-area: ao1; }
+.area2 {
+  grid-area: ah1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.area3 { grid-area: ao2; }
+
+.area1, .area2, .area3 {
+  text-align: center;
+  background-color: white;
+
+}
+
+#ao1 {
+  text-align: center;
+   background-color: black;
+  display: grid;
+  grid-gap: 5px;
+}
+#ao1 > div {
+  grid-row: 1;
+  background: white;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  #ao2 {
+    text-align: center;
+   background-color: black;
+  display: grid;
+  grid-gap: 5px;
+}
+#ao2 > div {
+  grid-row: 1;
+  background: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+/**archi1*********/
+
+/**archi2**
+<style>
+#outer-grid {
+  display: grid;
+  padding: 5px;
+  grid-gap: 5px;
+    grid-template-areas:
+    'ao1 ao1 au1 au1 au1 au1 au1'
+    'ah1 ah1 au1 au1 au1 au1 au1'
+    'au2 au2 au1 au1 au1 au1 au1';
+   background-color: black;
+   width: 640px;
+   height: 250px;
+grid-template-rows: 60px 80px 100px;
+   margin: auto;
+}
+.area1 { grid-area: ao1; }
+.area2 { grid-area: ah1; }
+.area3 { grid-area: au2; }
+.area4 { grid-area: au1; }
+
+
+.area1, .area2, .area3, .area4 {
+  text-align: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+</style>
+<div id="outer-grid">
+    <div class="area1" id="ao1">
+    Sous-espace bureau
+    </div>
+    <div class="area2">Couloir</div>
+    <div class="area3" id="au2">
+        Sous-espace utilitaire
+    </div>
+    <div class="area4" id="au1">
+        Sous-espace utilitaire
+    </div>
+    
+</div>
+**archi2**/
+

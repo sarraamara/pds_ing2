@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>DWP Map</title>
+	 <link th:href="@{/styles/styles.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="game-container">
+    	
+    	<canvas class="game-canvas" width="1450" height="704"></canvas>
+    	
+    	<div><input type="image" th:src="@{/images/tiles/settings.png}" id="settingsButton" onclick="openInventory()"></div>
+
+    	<!-- The Inventory window(Rooms to place) -->
+    	<div id="Inventory" class="modal">
+
+    		<!-- Inventory content -->
+    		<div class="inventory-content">
+    			<span class="close" onclick="closeInventory()">&times;</span>
+    			<h2>Veuillez choisir la salle que vous voulez placer dans le DWP.</h2>
+    			<div class="gallery">
+    				<div class="row">
+    					<div class="column">
+    						<img th:src="@{/images/tiles/office_room.png}" >
+    						<div class="desc">Bureau</div>
+    					</div>
+    					<div class="column">
+    						<img th:src="@{/images/tiles/office_room.png}" >
+    						<div class="desc">Salle de réunion</div>
+    					</div>
+    					<div class="column">
+    						<img th:src="@{/images/tiles/office_room.png}" >
+    						<div class="desc">Cuisine</div>
+    					</div>
+    					<div class="column">
+    						<img th:src="@{/images/tiles/office_room.png}">
+    						<div class="desc">Couloir</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+
+    </div>
+
+
+    <!-- Script -->
+    <script th:src="@{/js/Overworld.js}"></script>
+    <script th:src="@{/js/init.js}"></script>
+
+</body>
+</html>
